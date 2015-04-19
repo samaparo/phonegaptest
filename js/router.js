@@ -36,7 +36,7 @@ var router = (function () {
         }
     }
 
-    window.addEventListener('hashchange', start);
+    $(window).on('hashchange', start);
 
     return {
         addRoute: addRoute,

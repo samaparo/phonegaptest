@@ -2,18 +2,23 @@ var app = {
     // Application Constructor
     initialize: function() {
     	var initializeProcedure = (function(){
-    		router.addRoute('', function() {
-    			console.log('index');
+
+    		FastClick.attach(document.body);
+    		var demoLabel = document.getElementById('demo-label');
+    		router.addRoute('coupon', function() {
+    			demoLabel.innerHTML = 'index';
   			});
 
   			router.addRoute('locations', function() {
-  				console.log('locations');
+  				demoLabel.innerHTML = 'locations';
+
   			});
 
   			router.addRoute('profile', function() {
-  				console.log('profile');
+  				demoLabel.innerHTML = 'profile';
   			});
 
+  			router.load('coupon');
   			router.start();
     	});
 
