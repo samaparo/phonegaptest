@@ -1,11 +1,27 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        document.addEventListener('deviceready', function() {
-            console.log('are you ready too?');
-        }, false);
+    	var initializeProcedure = (function(){
+    		router.addRoute('', function() {
+    			console.log('index');
+  			});
 
-        //console.log(cordova);
+  			router.addRoute('locations', function(id) {
+  				console.log('locations');
+  			});
+
+  			router.addRoute('profile', function(id) {
+  				console.log('profile');
+  			});
+
+  			router.start();
+    	});
+
+    	if(window.cordova) {
+        	document.addEventListener('deviceready', initializeProcedure, false);
+    	} else {
+    		window.addEventListener('load', initializeProcedure, false);
+    	}
     }
 };
 
