@@ -6,11 +6,11 @@ var app = {
     			console.log('index');
   			});
 
-  			router.addRoute('locations', function(id) {
+  			router.addRoute('locations', function() {
   				console.log('locations');
   			});
 
-  			router.addRoute('profile', function(id) {
+  			router.addRoute('profile', function() {
   				console.log('profile');
   			});
 
