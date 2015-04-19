@@ -4,6 +4,8 @@ var app = {
         document.addEventListener('deviceready', function() {
             console.log('are you ready too?');
         }, false);
+
+        //console.log(cordova);
     }
 };
 
